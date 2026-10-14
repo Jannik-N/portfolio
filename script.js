@@ -12,3 +12,9 @@ nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => 
   nav.classList.remove('is-open');
 }));
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+// Zuverlässig nach oben scrollen, auch wenn der Header sticky ist.
+document.querySelector('.back-to-top')?.addEventListener('click', () => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({top: 0, behavior: reduceMotion ? 'instant' : 'smooth'});
+});

@@ -7,3 +7,10 @@
 .hero-role{display:inline-block;white-space:nowrap}
 .service-indicator{display:block;width:7px;height:7px;border-radius:50%;background:var(--aqua);opacity:.8;justify-self:end}
 @media(max-width:470px){.hero-role{white-space:normal;display:inline}}
+
+/* V3: Ein natürlich umbrochener Einleitungstext und ein echter Nach-oben-Button. */
+.hero-sub {text-wrap:pretty;max-width:49ch;}
+.hero-role {display:inline;white-space:normal;overflow-wrap:normal;}
+.back-to-top {border:0;background:transparent;padding:8px 0;color:inherit;cursor:pointer;font:inherit;}
+.back-to-top:hover {color:#fff;}
+.back-to-top:focus-visible {outline:3px solid #41d2df;outline-offset:3px;}
